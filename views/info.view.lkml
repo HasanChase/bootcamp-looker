@@ -1,4 +1,6 @@
 view: info {
+  sql_table_name: `datasightdev.Salaries.Info`
+    ;;
 
   dimension: company_location {
     type: string
@@ -8,6 +10,11 @@ view: info {
   dimension: company_size {
     type: string
     sql: ${TABLE}.company_size ;;
+  }
+
+  dimension: employee_residence {
+    type: string
+    sql: ${TABLE}.employee_residence ;;
   }
 
   dimension: employment_type {
@@ -46,14 +53,12 @@ view: info {
   }
 
   dimension: work_year {
-    type: tier
-    tiers: [2019,2020,2021,2022,2023]
-    style: integer
+    type: number
     sql: ${TABLE}.work_year ;;
   }
 
-  measure: average {
-    type: average
-    sql: ${TABLE}.salary ;;
+  measure: count {
+    type: count
+    drill_fields: []
   }
 }
