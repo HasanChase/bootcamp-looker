@@ -17,3 +17,4 @@ explore: info {
       sql_on: ${company_size} = ${info.company_size} ;;
     }
 }
+# persist_for: "30 minutes"
