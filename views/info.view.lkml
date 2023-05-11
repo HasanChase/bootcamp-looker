@@ -53,12 +53,14 @@ view: info {
   }
 
   dimension: work_year {
-    type: number
+    type: tier
+    tiers: [2019,2020,2021,2022,2023]
+    style: integer
     sql: ${TABLE}.work_year ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  measure: average {
+    type: average
+    sql: ${TABLE}.salary ;;
   }
 }
