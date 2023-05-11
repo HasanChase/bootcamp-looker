@@ -1,4 +1,7 @@
 view: pdt {
+  sql_table_name: `datasightdev.Salaries.PDT`
+    ;;
+
   dimension: company_size {
     type: string
     sql: ${TABLE}.company_size ;;
