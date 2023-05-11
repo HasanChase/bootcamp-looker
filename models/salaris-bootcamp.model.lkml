@@ -14,7 +14,7 @@ explore: info {
   join: pdt {
       type: left_outer
       relationship: many_to_one
-      sql_on: ${company_size} = ${info.company_size} ;;
+      sql_on: ${info.company_size} = ${company_size} ;;
     }
 }
 # persist_for: "30 minutes"
