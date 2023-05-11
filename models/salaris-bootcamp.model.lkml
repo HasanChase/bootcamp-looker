@@ -11,10 +11,9 @@ datagroup: salaris-bootcamp_default_datagroup {
 persist_with: salaris-bootcamp_default_datagroup
 
 explore: info {
-  join: pdt {
-      type: left_outer
-      relationship: many_to_one
-      sql_on: ${info.company_size} = ${company_size} ;;
-    }
+  # join: pdt {
+  #     type: left_outer
+  #     relationship: many_to_one
+  #     sql_on: ${info.job_title} = ${job_title} ;;
+  #   }
 }
-# persist_for: "30 minutes"
