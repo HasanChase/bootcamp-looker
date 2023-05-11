@@ -10,4 +10,10 @@ datagroup: salaris-bootcamp_default_datagroup {
 
 persist_with: salaris-bootcamp_default_datagroup
 
-explore: info {}
+explore: info {
+  join: pdt {
+      type: left_outer
+      relationship: many_to_one
+      sql_on: ${company_size} = ${info.company_size} ;;
+    }
+}

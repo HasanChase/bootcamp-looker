@@ -1,6 +1,4 @@
 view: info {
-  sql_table_name: `Salaries.Info`
-    ;;
 
   dimension: company_location {
     type: string
@@ -10,11 +8,6 @@ view: info {
   dimension: company_size {
     type: string
     sql: ${TABLE}.company_size ;;
-  }
-
-  dimension: employee_residence {
-    type: string
-    sql: ${TABLE}.employee_residence ;;
   }
 
   dimension: employment_type {
